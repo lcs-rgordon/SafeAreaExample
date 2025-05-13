@@ -9,13 +9,70 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        ZStack {
+
+            // Background
+            Image("LCS")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+
+            // Foreground
+            LinearGradient(colors: [.clear, .black], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+                .border(.red)
+                .overlay(alignment: .center) {
+                    VStack {
+                        
+                        Image("LCS-logo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150)
+                        
+                        Button {
+                            // Do something
+                        } label: {
+                            Label("Map", systemImage: "map")
+                                .frame(width: 200)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.lcsGreen)
+
+                        Button {
+                            // Do something
+                        } label: {
+                            Label("Map", systemImage: "map")
+                                .frame(width: 200)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.lcsGreen)
+
+                        Button {
+                            // Do something
+                        } label: {
+                            Label("Map", systemImage: "map")
+                                .frame(width: 200)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.lcsGreen)
+
+                        Button {
+                            // Do something
+                        } label: {
+                            Label("Map", systemImage: "map")
+                                .frame(width: 200)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.lcsGreen)
+
+                        Spacer()
+                        
+                    }
+                }
+                .padding(.top, 300)
+            
         }
-        .padding()
     }
 }
 
